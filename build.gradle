@@ -21,6 +21,7 @@ repositories {
 
 ext {
     set('snippetsDir', file("build/generated-snippets"))
+//    set('springCloudVersion', "2021.0.1")
 }
 
 dependencies {
@@ -31,6 +32,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+//    Spring Cloud
+//    implementation 'org.springframework.cloud:spring-cloud-config-server'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-vault-config'
 
 //    Lombok
     compileOnly 'org.projectlombok:lombok'
@@ -51,6 +57,12 @@ dependencies {
 bootJar {
     destinationDirectory = file("./target")
 }
+
+//dependencyManagement {
+//    imports {
+//        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+//    }
+//}
 
 tasks.named('test') {
     outputs.dir snippetsDir
