@@ -43,15 +43,15 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 
 //    Spring doc
-    implementation 'org.springdoc:springdoc-openapi-ui:1.6.8'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
 
 //    MariaDB
 //    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 
 //    MapStruct
-    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+    implementation 'org.mapstruct:mapstruct:1.5.2.Final'
     compileOnly 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
-    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
 }
 
 bootJar {
